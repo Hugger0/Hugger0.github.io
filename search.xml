@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Hello World</title>
+    <url>/2025/10/09/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>the first blog</title>
+    <url>/2025/10/04/realfirstone/</url>
+    <content><![CDATA[<h3 id="111222"><a href="#111222" class="headerlink" title="111222"></a>111222</h3><h5 id="111222-1"><a href="#111222-1" class="headerlink" title="111222"></a>111222</h5>]]></content>
+  </entry>
+  <entry>
+    <title>the first blog</title>
+    <url>/2025/10/04/the-first-blog/</url>
+    <content><![CDATA[<p>这里没有内容，只是测试</p>
+<span id="more"></span>
+
+
+
+]]></content>
+  </entry>
+  <entry>
+    <title>随便写写评《三体》：黑暗森林的冷酷诗篇</title>
+    <url>/2025/10/05/%E9%9A%8F%E4%BE%BF%E5%86%99%E5%86%99/</url>
+    <content><![CDATA[<p>这是一个测试，所以随便写，测试各种情况，先复制粘贴别的过来<br>这是我对《三体》的第一段感想，它构建了一个宏大的宇宙观。<br>字里行间透露出一种理性的冷酷。<br>我尤其喜欢罗辑这个角色。<br>他的成长弧光非常完整。<br>从一个玩世不恭的学者，<br>到最后成为整个人类的执剑人。</p>
+<span id="more"></span>
+
+<p>这里是文章的剩余部分，点击“阅读全文”后才会显示…</p>
+<h1 id="一、标题和正文"><a href="#一、标题和正文" class="headerlink" title="一、标题和正文"></a>一、标题和正文</h1><p>使用 <code>#</code> 表示标题，其中 <code>#</code> 号必须在行首，例如：  </p>
+<h1 id="一号标题"><a href="#一号标题" class="headerlink" title="一号标题"></a>一号标题</h1><h2 id="二号标题"><a href="#二号标题" class="headerlink" title="二号标题"></a>二号标题</h2><h3 id="三号标题"><a href="#三号标题" class="headerlink" title="三号标题"></a>三号标题</h3><h4 id="四号标题"><a href="#四号标题" class="headerlink" title="四号标题"></a>四号标题</h4><h5 id="五号标题"><a href="#五号标题" class="headerlink" title="五号标题"></a>五号标题</h5><h6 id="六号标题"><a href="#六号标题" class="headerlink" title="六号标题"></a>六号标题</h6><p>使用 <code>===</code> 或者 <code>---</code> 表示，例如：  </p>
+<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><p>正文字体</p>
+<p>1、改变字体<br>在 Markdown 语法中，使用 <code>&lt;font&gt;</code> 标签的 <code>face</code> 属性修改文字字体。字体在不同环境中支持程度不同，表现结果可能也不同。</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown"><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">face</span>=<span class="hljs-string">&quot;HEI&quot;</span>&gt;</span></span>这里是黑体<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span></span><br><br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">face</span>=<span class="hljs-string">&quot;KAI&quot;</span>&gt;</span></span>这里是楷体<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span></span><br><br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">face</span>=<span class="hljs-string">&quot;GB18030 Bitmap&quot;</span>&gt;</span></span>这里是扩展字体<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span></span><br></code></pre></td></tr></table></figure>
+
+<p><font face="HEI">这里是黑体</font><br><font face="KAI">这里是楷体</font><br><font face="GB18030 Bitmap">这里是扩展字体</font></p>
+<p>2、修改字号<br>Markdown 有三种主要方式<br>第一种是使用 <code>&lt;font&gt;</code> 标签；<br>第二种通过 <code>&lt;big&gt;</code> 或者 <code>&lt;small&gt;</code> 标签<br>第三种是通过修改 <code>style</code> 样式实现。</p>
+<p>使用 <code>&lt;font&gt;</code> 标签 <code>size</code> 属性修改局部字号</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown"><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">size</span>=<span class="hljs-string">&quot;1&quot;</span>&gt;</span></span>1号字 最小<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span></span><br><br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">size</span>=<span class="hljs-string">&quot;2&quot;</span>&gt;</span></span>2号字<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span></span><br><br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">size</span>=<span class="hljs-string">&quot;3&quot;</span>&gt;</span></span>3号字 默认<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span></span><br><br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">size</span>=<span class="hljs-string">&quot;4&quot;</span>&gt;</span></span>4号字<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span></span><br><br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">size</span>=<span class="hljs-string">&quot;5&quot;</span>&gt;</span></span>5号字<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span></span><br><br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">size</span>=<span class="hljs-string">&quot;6&quot;</span>&gt;</span></span>6号字<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span></span><br><br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">size</span>=<span class="hljs-string">&quot;7&quot;</span>&gt;</span></span>7号字 最大<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span></span><br></code></pre></td></tr></table></figure>
+
+<p><font size="1">1号字 最小</font></p>
+<p><font size="2">2号字</font></p>
+<p><font size="3">3号字 默认</font></p>
+<p><font size="4">4号字</font></p>
+<p><font size="5">5号字</font></p>
+<p><font size="6">6号字</font></p>
+<p><font size="7">7号字 最大</font></p>
+<p>3、字体颜色<br>在 Markdown 语法中，使用 <code>&lt;font&gt;</code> 标签的 <code>color</code> 属性修改文字颜色。</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown"><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">color</span>=<span class="hljs-string">&quot;red&quot;</span>&gt;</span></span>红色<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span></span><br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">color</span>=<span class="hljs-string">&quot;green&quot;</span>&gt;</span></span>绿色<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span></span><br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">color</span>=<span class="hljs-string">&quot;blue&quot;</span>&gt;</span></span>蓝色<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span></span><br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">color</span>=<span class="hljs-string">&quot;rgb(200, 100, 100)&quot;</span>&gt;</span></span>使用 rgb 颜色值<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span></span><br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">color</span>=<span class="hljs-string">&quot;#FF00BB&quot;</span>&gt;</span></span>使用十六进制颜色值<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span></span><br></code></pre></td></tr></table></figure>
+
+<p><font color="red">红色</font><br><font color="green">绿色</font><br><font color="blue">蓝色</font><br><font color="rgb(200, 100, 100)">使用 rgb 颜色值</font><br><font color="#FF00BB">使用十六进制颜色值</font></p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown"><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;background: linear-gradient( to right, #ff1616, #ff7716, #ffdc16, #36c945, #10a5ce, #0f0096, #a51eff, #ff1616);&quot;</span>&gt;</span></span>这是七色光彩背景颜色<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span></span><br></code></pre></td></tr></table></figure>
+
+<p><font style="background: linear-gradient( to right, #ff1616, #ff7716, #ffdc16, #36c945, #10a5ce, #0f0096, #a51eff, #ff1616);">这是七色光彩背景颜色</font></p>
+<h1 id="二、分割线"><a href="#二、分割线" class="headerlink" title="二、分割线"></a>二、分割线</h1><p>分隔线是用一条明显的横线，来划分文章的上下两个部分，从而使排版变得美观</p>
+<p>123</p>
+<hr>
+<hr>
+<h1 id="三、粗体斜体"><a href="#三、粗体斜体" class="headerlink" title="三、粗体斜体"></a>三、粗体斜体</h1><p>使用 <code>*</code> 和 <code>**</code> 分别表示斜体和粗体，例如  </p>
+<p><em>斜体</em><br><strong>粗体</strong><br><em><strong>又斜又粗</strong></em></p>
+<p><del>我是要删掉的文字</del></p>
+<h1 id="四、超链接和图片"><a href="#四、超链接和图片" class="headerlink" title="四、超链接和图片"></a>四、超链接和图片</h1><p>Markdown 支持两种超链接的定义方式：<code>行内定义</code> 和 <code>全局声明</code><br>都是由 「中括号 <code>[]</code>」来声明。</p>
+<p>语法：<code>中括号[链接名称](目标链接)</code></p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown">Obsidan简单入门教程[<span class="hljs-string">哔哩哔哩</span>](<span class="hljs-link">https://space.bilibili.com/507578555/?spm_id_from=333.999.0.0 &#x27;IOI&#x27;</span>)<br></code></pre></td></tr></table></figure>
+
+<p>Obsidan简单入门教程<a href="https://space.bilibili.com/507578555/?spm_id_from=333.999.0.0" title="IOI">哔哩哔哩</a></p>
+<p>在 Markdown 语法中，<br>语法：<code>![替换文字](图片路径 &quot;标题(可选)&quot;)</code> 的形式定义图片</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown">![<span class="hljs-string">马博峰</span>](<span class="hljs-link">http://t13.baidu.com/it/u=3695680119,4124722001&amp;fm=224&amp;app=112&amp;f=JPEG?w=350&amp;h=350</span>)<br></code></pre></td></tr></table></figure>
+
+<p><img src="http://t13.baidu.com/it/u=3695680119,4124722001&fm=224&app=112&f=JPEG?w=350&h=350" alt="马博峰"></p>
+<p><img src="https://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E9%A9%AC%E5%8D%9A%E5%B3%B0&step_word=&hs=0&pn=0&spn=0&di=7108135681980891137&pi=0&rn=1&tn=baiduimagedetail&is=0,0&istype=0&ie=utf-8&oe=utf-8&in=&cl=2&lm=-1&st=undefined&cs=1637495421,647503309&os=1482974809,4155393326&simid=1637495421,647503309&adpicid=0&lpn=0&ln=450&fr=&fmq=1655308061627_R&fm=&ic=undefined&s=undefined&hd=undefined&latest=undefined&copyright=undefined&se=&sme=&tab=0&width=undefined&height=undefined&face=undefined&ist=&jit=&cg=&bdtype=15&oriquery=&objurl=https://gimg2.baidu.com/image_search/src=http://zhengxin-pub.cdn.bcebos.com/mark/305f97293a328dcf971e1e684159c120.jpg&refer=http://zhengxin-pub.cdn.bcebos.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1657900066&t=678054910d3c0a812fadecd69827c195&fromurl=ippr_z2C$qAzdH3FAzdH3Fwtqtviw_z&e3Bkwt17_z&e3Bv54AzdH3F4w6hAzdH3Ff?q=%25Cd%25ED%25Bd%25Al%25B0%25Ec&gsm=1&rpstart=0&rpnum=0&islist=&querylist=&nojc=undefined&dyTabStr=MCwzLDYsMSw0LDUsNyw4LDIsOQ=="></p>
+<h1 id="五、有序和无需列表"><a href="#五、有序和无需列表" class="headerlink" title="五、有序和无需列表"></a>五、有序和无需列表</h1><p><strong>1、无序列表</strong></p>
+<p>使用 <code>-</code>、<code>+</code> 和 <code>*</code> 表示无序列表，前后留一行空白，可嵌套，例如</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown">使用星号生成无序列表<br><span class="hljs-bullet">*</span> 项目1<br>使用加号生成无序列表<br><span class="hljs-bullet">+</span> 项目2<br>使用减号生成无序列表<br><span class="hljs-bullet">-</span> 项目3<br></code></pre></td></tr></table></figure>
+
+<p>使用星号生成无序列表</p>
+<ul>
+<li>项目1<br>使用加号生成无序列表</li>
+</ul>
+<ul>
+<li>项目2<br>使用减号生成无序列表</li>
+</ul>
+<ul>
+<li>项目3</li>
+</ul>
+<p><strong>2、无序列表的嵌套</strong></p>
+<p>在 <code>-</code>、<code>+</code> 和 <code>*</code> 之前使用tab键将其缩进，每个tab表示一层。</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown">无序列表的嵌套<br><span class="hljs-bullet">*</span> 第一层 1<br><span class="hljs-bullet">    *</span> 第二层 1<br><span class="hljs-bullet">      *</span> 第三层 1<br><span class="hljs-bullet">        *</span> 第四层 1<br><span class="hljs-bullet">          *</span> 第五层 1<br><span class="hljs-bullet">      *</span> 第三层 2<br><span class="hljs-bullet">    *</span> 第二层 2<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>第一层 1<ul>
+<li>第二层 1<ul>
+<li>第三层 1<ul>
+<li>第四层 1<ul>
+<li>第五层 1</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>第三层 2</li>
+</ul>
+</li>
+<li>第二层 2</li>
+</ul>
+</li>
+</ul>
+<p><strong>3、有序列表</strong></p>
+<p>通过「数字 + <code>.</code> 」的形式定义有序列表，有序列表在发布后会被转化为：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown"><span class="hljs-section">### 有序列表</span><br><br>使用数字实现有序列表<br><br><span class="hljs-bullet">1.</span> 项目1<br><span class="hljs-bullet">2.</span> 项目2<br><span class="hljs-bullet">3.</span> 项目3<br><br>源码中的数字与渲染后的数字并不一一对应，但可以决定列表的开始序号<br></code></pre></td></tr></table></figure>
+
+
+
+<h1 id="六、引用"><a href="#六、引用" class="headerlink" title="六、引用"></a>六、引用</h1><p>使用 <code>&gt;</code> 表示，可以有多个 <code>&gt;</code>，表示层级更深，例如</p>
+<blockquote>
+<p>第一层</p>
+<blockquote>
+<p>第二层<br>这样是跳不出去的</p>
+<blockquote>
+<p>还可以更深</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h1 id="七、代码样式"><a href="#七、代码样式" class="headerlink" title="七、代码样式"></a>七、代码样式</h1><p>1、行内代码</p>
+<p>使用 「反引号 <code>`</code>」符号定义行内代码。</p>
+<p><code>行内代码</code></p>
+<p>2、代码块</p>
+<p>使用四个空格缩进表示代码块，例如</p>
+<pre><code class="hljs">public class HelloWorld
+{
+    public static void main(String[] args)
+    { 
+        System.out.println( &quot;Hello, World!&quot; );
+    }
+}
+</code></pre>
+<h1 id="八、表格"><a href="#八、表格" class="headerlink" title="八、表格"></a>八、表格</h1><p><strong>Markdown 表格包含三个部分：表头、分割线、数据。</strong></p>
+<ul>
+<li><strong>表头</strong> 用来对列名对象进行描述，也就是通常所说的列名；</li>
+<li><strong>数据</strong> 用来展示每行的具体内容，数据是表格的核心；</li>
+<li><strong>分割线</strong> 用来区分表头和数据，也是 Markdown 中表格定义的最基本语法要求。</li>
+</ul>
+<p><strong>Markdown 表格由 「竖线 <code>|</code>」、「减号 <code>-</code>」、「冒号 <code>:</code>」三种符号组成。</strong></p>
+<ul>
+<li><strong>竖线</strong> 用来定义列，每两个竖线之间为一个单元格元素；</li>
+<li><strong>减号</strong> 用来定义分割线，也就是分割表头和数据体；</li>
+<li><strong>冒号</strong> 配合减号使用，用于定义列数据的对齐属性。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>商品</th>
+<th align="right">数量</th>
+<th align="center">单价</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>苹果苹果苹果</td>
+<td align="right">10</td>
+<td align="center">$1</td>
+</tr>
+<tr>
+<td>电脑</td>
+<td align="right">1</td>
+<td align="center">$1999</td>
+</tr>
+</tbody></table>
+<h1 id="九、数学公式"><a href="#九、数学公式" class="headerlink" title="九、数学公式"></a>九、数学公式</h1><p>Markdown 中的数学公式支持支持 <strong>LaTeX</strong>，分为「行中公式」和「独立公式」两种。</p>
+<p>行中公式用两个单独的「美元符 <code>$</code>」表示。</p>
+<p>世界上最难的问题$1+1&#x3D;2$，如何证明？</p>
+<p>独立公式用两个连续的「美元符 <code>$$</code>」表示，换行通过 <code>\</code> 实现。</p>
+<p>平均数符号：$overline{xyz}$<br>开二次方符号：$sqrt x$<br>开方符号：$sqrt[3]{x+y}$<br>对数符号：$log(x)$<br>极限符号：$lim^{x to infty}<em>{y to 0}{frac{x}{y}}$<br>极限符号：$displaystyle lim^{x to infty}</em>{y to 0}{frac{x}{y}}$<br>求和符号：$sum^{x to infty}<em>{y to 0}{frac{x}{y}}$<br>求和符号：$displaystyle sum^{x to infty}</em>{y to 0}{frac{x}{y}}$<br>积分符号：$int^{infty}<em>{0}{xdx}$<br>积分符号：$displaystyle int^{infty}</em>{0}{xdx}$ </p>
+<h1 id="十、任务列表"><a href="#十、任务列表" class="headerlink" title="十、任务列表"></a>十、任务列表</h1><p>在 Markdown 文件中，在 ” 无序列表 <code>-,+,*</code> ” 后面使用 <code>「中括号 []」</code> 声明复选框。在中括号中写入 <code>x</code> ，便可实现选中效果。</p>
+<ul>
+<li><input disabled="" type="checkbox"> Java</li>
+<li><input checked="" disabled="" type="checkbox"> Php</li>
+</ul>
+<h1 id="十一、标签"><a href="#十一、标签" class="headerlink" title="十一、标签"></a>十一、标签</h1><p>#标签<br>#dark </p>
+<h1 id="十二、绘图"><a href="#十二、绘图" class="headerlink" title="十二、绘图"></a>十二、绘图</h1><pre><code class=" mermaid">gantt
+    title A Gantt Diagram
+    dateFormat  YYYY-MM-DD
+    section Section
+    A task           :a1, 2014-01-01, 30d
+    Another task     :after a1  , 20d
+    section Another
+    Task in sec      :2014-01-12  , 12d
+    another task      : 24d
+</code></pre>
+ <pre><code class=" mermaid">graph LR
+	%% s=start  e=end  c=convergence  o=one-way
+	
+	%% 汇聚点 朱标
+	s1[朱雄英]--&gt;|长子|c1[朱标]
+	s2_帝((朱允炆))--&gt;|次子|c1
+	
+	%%汇聚点 朱八八
+	c1--&gt;|长子|c2_帝((朱八八))
+	s3[朱樉]--&gt;|次子|c2_帝
+	s4[朱棡]--&gt;|三子|c2_帝
+	s5((朱高炽))--&gt;|长子|o1_帝((朱棣))--&gt;|四子|c2_帝
+	
+	%% 单行线
+	c2_帝--&gt;|子|o2[朱五四]--&gt;|子|o3[朱四九]--&gt;|子|e[朱百六]
+</code></pre>
+
+<pre><code class=" mermaid">classDiagram
+    Animal &lt;|-- Duck
+    Animal &lt;|-- Fish
+    Animal &lt;|-- Zebra
+    Animal : +int age
+    Animal : +String gender
+    Animal: +isMammal()
+    Animal: +mate()
+    class Duck&#123;
+      +String beakColor
+      +swim()
+      +quack()
+    &#125;
+    class Fish&#123;
+      -int sizeInFeet
+      -canEat()
+    &#125;
+    class Zebra&#123;
+      +bool is_wild
+      +run()
+    &#125;
+</code></pre>
+]]></content>
+  </entry>
+</search>
