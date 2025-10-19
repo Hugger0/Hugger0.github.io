@@ -1,0 +1,873 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Hugger">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="对SRE有什么了解？ 口语化回答思路: “我理解的SRE，核心思想是用软件工程的方法来解决运维问题。它和传统运维最大的不同，是不只满足于‘救火’，而是更关注如何通过自动化和系统设计来从根本上提升系统的可靠性。SRE会定义一些量化的目标，比如SLO（服务等级目标），然后通过监控和数据分析，来驱动工作，确保服务稳定。同时，SRE非常强调减少‘重复性的人工操作’（Toil），会花很多时间去开发工具、优化">
+<meta property="og:type" content="article">
+<meta property="og:title" content="百度SRE别人的面经AI回答下">
+<meta property="og:url" content="http://example.com/2024/10/01/%E7%99%BE%E5%BA%A6SRE%E5%88%AB%E4%BA%BA%E7%9A%84%E9%9D%A2%E7%BB%8F/index.html">
+<meta property="og:site_name" content="杂乱的小窝">
+<meta property="og:description" content="对SRE有什么了解？ 口语化回答思路: “我理解的SRE，核心思想是用软件工程的方法来解决运维问题。它和传统运维最大的不同，是不只满足于‘救火’，而是更关注如何通过自动化和系统设计来从根本上提升系统的可靠性。SRE会定义一些量化的目标，比如SLO（服务等级目标），然后通过监控和数据分析，来驱动工作，确保服务稳定。同时，SRE非常强调减少‘重复性的人工操作’（Toil），会花很多时间去开发工具、优化">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-10-01T14:30:00.000Z">
+<meta property="article:modified_time" content="2025-10-19T11:32:50.101Z">
+<meta property="article:author" content="Hugger">
+<meta property="article:tag" content="书评">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>百度SRE别人的面经AI回答下 - 杂乱的小窝</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 8.0.0"><link rel="alternate" href="/atom.xml" title="杂乱的小窝" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 40vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Hugger的博客</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="百度SRE别人的面经AI回答下"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-10-01 14:30" pubdate>
+          2024年10月1日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          7.1k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          60 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">百度SRE别人的面经AI回答下</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="对SRE有什么了解？"><a href="#对SRE有什么了解？" class="headerlink" title="对SRE有什么了解？"></a>对SRE有什么了解？</h2><ul>
+<li><strong>口语化回答思路:</strong> “我理解的SRE，核心思想是<strong>用软件工程的方法来解决运维问题</strong>。它和传统运维最大的不同，是不只满足于‘救火’，而是更关注如何通过<strong>自动化</strong>和<strong>系统设计</strong>来从根本上提升系统的<strong>可靠性</strong>。SRE会定义一些量化的目标，比如SLO（服务等级目标），然后通过监控和数据分析，来驱动工作，确保服务稳定。同时，SRE非常强调减少‘重复性的人工操作’（Toil），会花很多时间去开发工具、优化流程，让运维工作变得更高效、更智能。”</li>
+<li><strong>考点:</strong> 对SRE岗位核心理念的理解，包括但不限于：可靠性、自动化、SLO&#x2F;SLI、数据驱动、减少琐事（Toil）。</li>
+</ul>
+<h2 id="平时怎么学习知识的？"><a href="#平时怎么学习知识的？" class="headerlink" title="平时怎么学习知识的？"></a>平时怎么学习知识的？</h2><ul>
+<li><strong>口语化回答思路:</strong> “我的学习方式主要分三块。<strong>第一是打基础</strong>，对于像操作系统、网络这些核心知识，我会看一些经典的教材，比如《鸟哥的Linux私房菜》或者《TCP&#x2F;IP详解》，把底层原理吃透。<strong>第二是动手实践</strong>，我会针对感兴趣的技术（比如Docker）去看官方文档，然后自己搭环境、做一些小项目，在实践中踩坑、解决问题。<strong>第三是跟进前沿</strong>，我会关注一些技术社区（比如GitHub）、技术大牛的博客或者美团技术团队的公众号，了解业界正在用什么技术，以及他们是怎么解决实际问题的。”</li>
+<li><strong>考点:</strong> 学习能力、技术热情、自驱力。</li>
+</ul>
+<h2 id="学校有项目吗？问自己的项目"><a href="#学校有项目吗？问自己的项目" class="headerlink" title="学校有项目吗？问自己的项目"></a>学校有项目吗？问自己的项目</h2><ul>
+<li><strong>口语化回答思路:</strong> （这部分请结合你准备好的弹幕工具和网络实训项目，使用STAR法则来清晰地介绍，重点突出你在其中的思考和解决问题的过程。）</li>
+<li><strong>考点:</strong> 项目实践能力、技术深度、解决问题的能力。</li>
+</ul>
+<h2 id="linux操作系统里的文件系统"><a href="#linux操作系统里的文件系统" class="headerlink" title="linux操作系统里的文件系统"></a>linux操作系统里的文件系统</h2><ul>
+<li><strong>口语化回答思路:</strong> “Linux的文件系统，可以理解成一个管理磁盘数据的‘图书馆管理员’。它的核心是<strong>VFS（虚拟文件系统）</strong>，这是一个抽象层，让Linux可以用同样的方式去操作各种不同的文件系统，比如我们常用的Ext4或者XFS。具体来说，文件系统通过两个关键的东西来管理数据：一个是<strong>inode（索引节点）</strong>，它就像图书的‘索引卡’，记录了文件的元数据，比如大小、权限、创建时间，以及最重要的——指向数据存放位置的指针。另一个是<strong>Data Block（数据块）</strong>，这就是真正存放文件内容的‘书页’。我们通过文件名找到inode，再通过inode找到所有的数据块，就把文件读出来了。”</li>
+<li><strong>考点:</strong> 文件系统的基本概念（VFS、inode、Data Block）。</li>
+</ul>
+<h2 id="描述下进程的应用程序，如何做文件读写操作过程？"><a href="#描述下进程的应用程序，如何做文件读写操作过程？" class="headerlink" title="描述下进程的应用程序，如何做文件读写操作过程？"></a>描述下进程的应用程序，如何做文件读写操作过程？</h2><ul>
+<li><strong>口语化回答思路:</strong> “应用程序自己是不能直接操作硬盘的，它需要请求操作系统内核来帮忙。这个过程是这样的：<ol>
+<li><strong>用户态发起系统调用：</strong> 我的应用程序（在用户态）想读一个文件，它会调用一个库函数，比如C语言的 <code>read()</code>。这个库函数会封装一个‘<strong>系统调用</strong>’，相当于按下一个‘门铃’，通知内核‘我需要你帮忙’。</li>
+<li><strong>切换到内核态：</strong> CPU收到这个信号后，会立刻从<strong>用户态切换到内核态</strong>，把控制权交给操作系统。</li>
+<li><strong>内核处理：</strong> 内核里的文件系统模块会接手这个请求，根据文件路径找到对应的inode，检查权限，然后通过inode里的信息，去磁盘上找到对应的数据块。</li>
+<li><strong>数据拷贝与返回：</strong> 内核把从磁盘读到的数据，先复制到内核自己的一个缓冲区里，然后再从这个内核缓冲区，<strong>复制到</strong>我应用程序指定的内存地址里。</li>
+<li><strong>返回用户态：</strong> 数据拷贝完成后，内核会从内核态切换回用户态，我的 <code>read()</code> 函数就返回了，应用程序就可以使用读到的数据了。”</li>
+</ol>
+</li>
+<li><strong>考点:</strong> 系统调用、用户态与内核态的切换、文件读写的底层流程。</li>
+</ul>
+<h2 id="内核读取完数据后，把数据放在哪里？后续假如再次读取这个文件，会从哪里拿？"><a href="#内核读取完数据后，把数据放在哪里？后续假如再次读取这个文件，会从哪里拿？" class="headerlink" title="内核读取完数据后，把数据放在哪里？后续假如再次读取这个文件，会从哪里拿？"></a>内核读取完数据后，把数据放在哪里？后续假如再次读取这个文件，会从哪里拿？</h2><ul>
+<li><strong>口语化回答思路:</strong> “内核读取完数据后，除了会把数据拷贝给应用程序，它还会在内核的内存里<strong>缓存</strong>一份。这个缓存通常叫做<strong>Page Cache（页缓存）</strong>。所以，如果我后续再次读取同一个文件，内核会先检查Page Cache里有没有这份数据。如果有，就直接从内存里拿给我，不用再去访问慢得多的磁盘了，这样速度会快非常多。”</li>
+<li><strong>考点:</strong> Page Cache（页缓存）的概念和作用。</li>
+</ul>
+<h2 id="缓存会一直保存吗？哪种情况会读不到呢？"><a href="#缓存会一直保存吗？哪种情况会读不到呢？" class="headerlink" title="缓存会一直保存吗？哪种情况会读不到呢？"></a>缓存会一直保存吗？哪种情况会读不到呢？</h2><ul>
+<li><strong>口语化回答思路:</strong> “缓存不会一直保存。有几种情况会导致再次读取时读不到缓存（也就是Cache Miss）：<ol>
+<li><strong>内存不足被回收：</strong> 这是最常见的原因。当系统内存紧张时，操作系统会按照一定的淘汰策略，比如<strong>LRU（最近最少使用）</strong>，把一些长期没被访问的缓存页给释放掉，给更需要的程序用。</li>
+<li><strong>文件在磁盘上被更新：</strong> 如果有别的进程直接修改了磁盘上的这个文件，内核会知道缓存里的数据‘脏’了（过时了），就会让这次读取操作穿透缓存，直接去读磁盘上的新数据。</li>
+<li><strong>机器重启：</strong> Page Cache是存在内存里的，所以机器一重启，里面的内容就全没了。”</li>
+</ol>
+</li>
+<li><strong>考点:</strong> 缓存的生命周期、Cache Miss的原因、内存淘汰机制。</li>
+</ul>
+<h2 id="什么情况会找不到呢？缺页异常呢？"><a href="#什么情况会找不到呢？缺页异常呢？" class="headerlink" title="什么情况会找不到呢？缺页异常呢？"></a>什么情况会找不到呢？缺页异常呢？</h2><ul>
+<li><strong>口语化回答思路:</strong> “这里的‘找不到’，我理解是指进程访问一个内存地址，但这个地址对应的数据目前不在物理内存里，这种情况就会触发<strong>缺页异常（Page Fault）</strong>。缺页异常其实不是一个‘错误’，而是操作系统正常工作的一种机制。比如我第一次读一个很大的文件，操作系统不会一次性把整个文件都加载到内存，而是先建立一个映射。当我读到某个位置，发现对应的数据页不在内存里，就会触发缺页异常。这时候，操作系统会接管，去磁盘上把需要的那一页数据加载到物理内存，然后更新页表，最后再让我的程序继续执行，整个过程对应用程序是透明的。”</li>
+<li><strong>考点:</strong> 缺页中断（Page Fault）的原理和处理流程。</li>
+</ul>
+<h2 id="谁回收了缓存呢？在什么条件回收呢？内存淘汰机制了解吗？"><a href="#谁回收了缓存呢？在什么条件回收呢？内存淘汰机制了解吗？" class="headerlink" title="谁回收了缓存呢？在什么条件回收呢？内存淘汰机制了解吗？"></a>谁回收了缓存呢？在什么条件回收呢？内存淘汰机制了解吗？</h2><ul>
+<li><strong>口语化回答思路:</strong> “回收缓存的工作是由<strong>Linux内核的内存管理子系统</strong>来做的。回收的触发条件就是<strong>系统内存压力大</strong>，比如空闲内存低于某个阈值了。这时候内核就会启动淘汰机制，最经典的就是<strong>LRU（Least Recently Used，最近最少使用）算法</strong>。它会维护一个链表，把最近访问过的内存页放在表头，很久没访问的就会沉到底部。当需要回收内存时，就优先从链表尾部开始回收。”</li>
+<li><strong>考点:</strong> 内存回收机制、LRU算法。</li>
+</ul>
+<h2 id="说下调度算法？讲几种调度算法吧？"><a href="#说下调度算法？讲几种调度算法吧？" class="headerlink" title="说下调度算法？讲几种调度算法吧？"></a>说下调度算法？讲几种调度算法吧？</h2><ul>
+<li><strong>口语化回答思路:</strong> “（这里面试官可能把CPU调度和内存调度搞混了，但你可以都答一下，展示你的知识广度）。CPU调度算法是操作系统用来决定下一个要运行哪个进程的规则。常见的有几种：<ol>
+<li><strong>先来先服务（FCFS）：</strong> 就像排队，谁先来谁先被执行，非常公平但效率不一定高。</li>
+<li><strong>最短作业优先（SJF）：</strong> 每次都挑执行时间最短的那个进程来运行，总的等待时间最短，但可能导致长作业一直等，饿死。</li>
+<li><strong>时间片轮转（Round Robin）：</strong> 这是现在分时操作系统最常用的。给每个进程分配一个很短的时间片（比如10毫秒），时间片用完了不管执没执行完，都得先下来，排到队尾去，让下一个进程上。这样保证了每个进程都能被‘雨露均沾’，响应性很好。”</li>
+</ol>
+</li>
+<li><strong>考点:</strong> 常见的CPU调度算法。</li>
+</ul>
+<hr>
+<h2 id="讲一下https连接过程"><a href="#讲一下https连接过程" class="headerlink" title="讲一下https连接过程"></a>讲一下https连接过程</h2><ul>
+<li><strong>口语化回答思路:</strong> “HTTPS的连接过程，简单说就是在建立TCP连接之后，又加了一层<strong>TLS&#x2F;SSL的加密握手</strong>。这个握手过程主要是为了商量出一套只有我们俩（客户端和服务器）知道的对称加密密钥。过程大概是：<ol>
+<li><strong>客户端问候（Client Hello）：</strong> 客户端发请求，告诉服务器‘我支持这些加密算法，我想跟你建个安全连接’。</li>
+<li><strong>服务器响应（Server Hello）：</strong> 服务器收到后，选定一种加密算法，然后把自己的<strong>数字证书</strong>（里面包含了服务器的公钥）发给客户端。</li>
+<li><strong>客户端验证与密钥交换：</strong> 客户端收到证书后，会找权威的CA机构验证这个证书是不是真的。验证通过后，客户端会生成一个随机数，叫‘预主密钥’，然后用证书里的<strong>公钥</strong>把它加密，再发给服务器。</li>
+<li><strong>服务器解密与生成会话密钥：</strong> 服务器收到后，用自己的<strong>私钥</strong>解密，得到那个‘预主密钥’。</li>
+<li><strong>握手完成：</strong> 现在，客户端和服务器都有了同一个‘预主密钥’，它们俩就用这个密钥，通过一个商量好的算法，各自生成了一模一样的<strong>对称会话密钥</strong>。之后的所有HTTP通信，就都用这个对称密钥来加密和解密了，这样既安全又高效。”</li>
+</ol>
+</li>
+<li><strong>考点:</strong> TLS&#x2F;SSL握手过程、数字证书、非对称加密与对称加密的结合使用。</li>
+</ul>
+<h2 id="客户端如何解密呢？？"><a href="#客户端如何解密呢？？" class="headerlink" title="客户端如何解密呢？？"></a>客户端如何解密呢？？</h2><ul>
+<li><strong>口语化回答思路:</strong> “这个问题问得很好，其实在握手阶段，客户端<strong>不需要解密</strong>服务器发来的任何关键信息。客户端的核心任务是<strong>用服务器的公钥去加密</strong>一个随机数（预主密钥）。真正的解密发生在服务器端，服务器用自己的私钥解密得到这个随机数。在这之后，双方都有了这个共同的秘密，然后各自生成了<strong>对称密钥</strong>。在后续的通信中，客户端和服务器都<strong>使用这个对称密钥</strong>来进行加密和解密。所以，客户端解密后续数据，靠的是握手阶段生成的那个对称密钥，而不是服务器的公钥或私钥。”</li>
+<li><strong>考点:</strong> 对非对称加密和对称加密在握手和通信中各自角色的清晰理解。</li>
+</ul>
+<hr>
+<h2 id="如何比较两个json是否相同"><a href="#如何比较两个json是否相同" class="headerlink" title="如何比较两个json是否相同"></a>如何比较两个json是否相同</h2><ul>
+<li><strong>口语化回答思路:</strong> “直接比较两个JSON字符串是不行的，因为key的顺序可能不同。要判断两个JSON在逻辑上是否相同，我会写一个<strong>递归函数</strong>来比较。<ol>
+<li><strong>基本思路：</strong> 首先，把两个JSON字符串都解析成Python对象（字典和列表的嵌套组合）。</li>
+<li><strong>递归比较函数：</strong><ul>
+<li><strong>第一步，先比较类型</strong>，如果一个<code>dict</code>一个<code>list</code>，那肯定不同。</li>
+<li><strong>如果都是字典：</strong> 先比较它们的key集合是不是完全一样。如果key都一样，再遍历每一个key，递归地去比较这两个字典里对应value。</li>
+<li><strong>如果都是列表：</strong> 先比较它们的长度是不是一样。如果长度一样，再遍历每一个位置，递归地比较这个位置上的元素。</li>
+<li><strong>如果是基本类型（字符串、数字等）：</strong> 直接用 <code>==</code> 比较就行。这就是递归的出口。</li>
+</ul>
+</li>
+<li><strong>只要有任何一步比较结果是False，整个函数就返回False。</strong> 如果所有递归都比较完了，还没返回False，那最后就返回True。”</li>
+</ol>
+</li>
+<li><strong>考点:</strong> 递归思想、数据结构（字典、列表）的遍历和比较、逻辑严谨性。</li>
+</ul>
+<hr>
+<h2 id="对岗位有什么了解，想做哪个方向"><a href="#对岗位有什么了解，想做哪个方向" class="headerlink" title="对岗位有什么了解，想做哪个方向"></a>对岗位有什么了解，想做哪个方向</h2><ul>
+<li><strong>口语化回答思路:</strong> （这部分需要结合你对美团SRE的了解和你自己的兴趣）“我对SRE岗位的理解是，它是一个连接开发和运维的桥梁，目标是保障业务的高可用和高性能。我对其中的<strong>自动化运维平台开发</strong>和<strong>稳定性体系建设</strong>这两个方向比较感兴趣。一方面，我喜欢写代码解决问题，希望能参与开发一些运维工具或者平台，来提升效率。另一方面，我也对如何从架构层面、流程层面去发现和解决潜在的稳定性风险很感兴趣。”</li>
+<li><strong>考点:</strong> 岗位认知、职业规划、个人兴趣与岗位的匹配度。</li>
+</ul>
+<h2 id="OSI七层协议和TCP-IP四层有什么区别"><a href="#OSI七层协议和TCP-IP四层有什么区别" class="headerlink" title="OSI七层协议和TCP&#x2F;IP四层有什么区别"></a>OSI七层协议和TCP&#x2F;IP四层有什么区别</h2><ul>
+<li><strong>口语化回答思路:</strong> “最主要的区别是：<strong>OSI是一个理论上非常完善的模型，而TCP&#x2F;IP是实践中被广泛应用的事实标准</strong>。<ul>
+<li><strong>分层不同：</strong> OSI是七层（物理、数据链路、网络、传输、会话、表示、应用），分得非常细。TCP&#x2F;IP是四层（网络接口层、网际层、传输层、应用层）。</li>
+<li><strong>关系上：</strong> 可以看作TCP&#x2F;IP是OSI模型的一个简化和实现。比如，OSI的应用层、表示层、会话层，在TCP&#x2F;IP里就合并成了一个应用层。OSI的物理层和数据链路层，在TCP&#x2F;IP里合并成了网络接口层。”</li>
+</ul>
+</li>
+<li><strong>考点:</strong> 计算机网络基础模型。</li>
+</ul>
+<h2 id="ICMP属于哪一层协议？HTTP属于哪一层？TCP-UDP？"><a href="#ICMP属于哪一层协议？HTTP属于哪一层？TCP-UDP？" class="headerlink" title="ICMP属于哪一层协议？HTTP属于哪一层？TCP&#x2F;UDP？"></a>ICMP属于哪一层协议？HTTP属于哪一层？TCP&#x2F;UDP？</h2><ul>
+<li><strong>口语化回答思路:</strong> “ICMP协议（比如我们常用的ping）属于<strong>网络层</strong>，因为它主要是用来传递IP层的控制信息的。HTTP协议属于<strong>应用层</strong>。TCP和UDP都属于<strong>传输层</strong>。”</li>
+<li><strong>考点:</strong> 常见协议的所属分层。</li>
+</ul>
+<h2 id="TCP-UDP区别"><a href="#TCP-UDP区别" class="headerlink" title="TCP&#x2F;UDP区别"></a>TCP&#x2F;UDP区别</h2><ul>
+<li><strong>口语化回答思路:</strong> “它们最核心的区别在于TCP是<strong>可靠的、面向连接的</strong>，而UDP是<strong>不可靠的、无连接的</strong>。<ul>
+<li><strong>TCP就像打电话：</strong> 必须先拨号（三次握手）建立连接，通话过程中能保证你说的话对方都能按顺序听到（可靠、有序），挂电话也要打招呼（四次挥手）。优点是可靠，缺点是准备工作多，开销大。</li>
+<li><strong>UDP就像寄明信片：</strong> 不用先联系，直接写上地址就扔邮筒了。它不保证对方一定能收到，也不保证收到的顺序。优点是快、开销小，缺点是不可靠。所以它适合像视频直播、DNS查询这种对实时性要求高，偶尔丢一两个包也能接受的场景。”</li>
+</ul>
+</li>
+<li><strong>考点:</strong> TCP&#x2F;UDP核心特性对比。</li>
+</ul>
+<h2 id="TCP如何保证可靠性"><a href="#TCP如何保证可靠性" class="headerlink" title="TCP如何保证可靠性"></a>TCP如何保证可靠性</h2><ul>
+<li><strong>口语化回答思路:</strong> “TCP保证可靠性主要靠一套组合拳：<ol>
+<li><strong>序列号和确认应答（ACK）：</strong> 发送的每个包都有一个序列号，接收方收到后会回复一个ACK，告诉发送方‘我收到了’。</li>
+<li><strong>超时重传：</strong> 如果发送方发了一个包，等了一段时间还没收到对方的ACK，就认为这个包可能丢了，于是会重新再发一遍。</li>
+<li><strong>流量控制：</strong> 通过滑动窗口机制，接收方可以告诉发送方‘我的缓冲区还剩多少空间’，防止发送方发太快把接收方撑爆。</li>
+<li><strong>拥塞控制：</strong> TCP有一套算法（比如慢启动、拥塞避免），来感知网络的拥堵情况，动态调整自己的发送速度，防止把网络搞瘫痪。”</li>
+</ol>
+</li>
+<li><strong>考点:</strong> TCP可靠性传输机制的实现细节。</li>
+</ul>
+<h2 id="TCP三次握手，四次挥手介绍一下下"><a href="#TCP三次握手，四次挥手介绍一下下" class="headerlink" title="TCP三次握手，四次挥手介绍一下下"></a>TCP三次握手，四次挥手介绍一下下</h2><ul>
+<li><strong>口语化回答思路:</strong> （这个是必考题，需要流利地讲出过程和状态）<ul>
+<li><strong>三次握手（建立连接）：</strong><ol>
+<li>客户端发一个SYN包给服务器，表示‘我想和你建连接’。</li>
+<li>服务器收到后，回复一个SYN+ACK包，表示‘同意，你那边准备好了吗？’。</li>
+<li>客户端再回复一个ACK包，表示‘我也准备好了，连接建立成功’。</li>
+</ol>
+</li>
+<li><strong>四次挥手（断开连接）：</strong><ol>
+<li>客户端发一个FIN包，表示‘我的话说完了’。</li>
+<li>服务器回复一个ACK，表示‘我知道你的话说完了’。（这时服务器可能还有数据没发完）</li>
+<li>等服务器也把自己的数据发完后，它再发一个FIN包给客户端，表示‘我的话也说完了’。</li>
+<li>客户端回复一个ACK，表示‘知道了’，然后等一会儿（2MSL），确保服务器收到了，再关闭连接。服务器收到这个ACK后就直接关闭了。</li>
+</ol>
+</li>
+<li>“之所以挥手是四次，关键在于服务器收到客户端的FIN后，可能自己还有数据要发，所以不能立即也发FIN，只能先回一个ACK。”</li>
+</ul>
+</li>
+<li><strong>考点:</strong> TCP连接管理。</li>
+</ul>
+<hr>
+<h2 id="每分钟定期扫描，监控IP的连接数，如果每分钟QPS达到100的IP就封禁掉，然后将TOP-5的IP统计到日志中，说一下会用到的命令。"><a href="#每分钟定期扫描，监控IP的连接数，如果每分钟QPS达到100的IP就封禁掉，然后将TOP-5的IP统计到日志中，说一下会用到的命令。" class="headerlink" title="每分钟定期扫描，监控IP的连接数，如果每分钟QPS达到100的IP就封禁掉，然后将TOP 5的IP统计到日志中，说一下会用到的命令。"></a>每分钟定期扫描，监控IP的连接数，如果每分钟QPS达到100的IP就封禁掉，然后将TOP 5的IP统计到日志中，说一下会用到的命令。</h2><ul>
+<li><strong>口语化回答思路:</strong> “这个需求可以通过一个Shell脚本结合<code>cron</code>定时任务来实现。<ol>
+<li><strong>统计和排序：</strong> 我会用<code>netstat</code>或<code>ss</code>命令来获取当前的连接，然后通过一连串的管道命令来处理。比如：<code>netstat -nt | awk &#39;{print $5}&#39; | cut -d: -f1 | sort | uniq -c | sort -nr</code>。这个命令链的作用是：列出连接 -&gt; 提取远端IP地址 -&gt; 去掉端口号 -&gt; 排序 -&gt; 统计每个IP出现的次数 -&gt; 按次数从高到低排序。</li>
+<li><strong>获取TOP 5并记录日志：</strong> 在上面命令的最后加上 <code>| head -n 5 &gt;&gt; /var/log/top_ips.log</code>，就可以把结果追加到日志文件里了。</li>
+<li><strong>循环处理和封禁：</strong> 我会把第一步的结果用 <code>while read</code> 循环来逐行处理。在循环里，判断连接数（第一个字段）是否大于100，如果大于，就提取IP地址（第二个字段），然后调用 <code>iptables -I INPUT -s IP地址 -j DROP</code> 命令来封禁这个IP。</li>
+<li><strong>定时执行：</strong> 最后，把这个脚本保存下来，通过 <code>crontab -e</code> 添加一个定时任务，设置为 <code>*/1 * * * * /path/to/script.sh</code>，让它每分钟执行一次。”</li>
+</ol>
+</li>
+<li><strong>考点:</strong> Linux命令行组合拳（awk, cut, sort, uniq）、iptables防火墙、cron定时任务。</li>
+</ul>
+<h2 id="CPU打满了，如何排查是哪一个服务"><a href="#CPU打满了，如何排查是哪一个服务" class="headerlink" title="CPU打满了，如何排查是哪一个服务"></a>CPU打满了，如何排查是哪一个服务</h2><ul>
+<li><strong>口语化回答思路:</strong> （同第一面的回答）“我会先用 <code>top</code> 命令，按一下大写的<code>P</code>，让进程按CPU使用率排序，排在最前面的就是嫌疑最大的进程，记下它的PID。然后用 <code>ps -ef | grep PID</code> 或者 <code>systemctl status PID</code>，就能看到这个进程属于哪个服务了。”</li>
+<li><strong>考点:</strong> Linux性能排查基础命令。</li>
+</ul>
+<h2 id="脑力题：统计一下北京有多少井盖？你需要哪些数据？"><a href="#脑力题：统计一下北京有多少井盖？你需要哪些数据？" class="headerlink" title="脑力题：统计一下北京有多少井盖？你需要哪些数据？"></a>脑力题：统计一下北京有多少井盖？你需要哪些数据？</h2><ul>
+<li><strong>口语化回答思路:</strong> “这是一个典型的费米问题，关键在于估算思路和模型。<ul>
+<li><strong>第一步，拆解问题：</strong> 我会把北京的井盖按区域和类型拆分。比如，按功能分为污水、雨水、电力、通信、燃气井盖等。按区域分为主干道、次干道、小区内部道路、人行道等。</li>
+<li><strong>第二步，建立估算模型：</strong> 我会选择一个主要变量来估算，比如<strong>道路长度</strong>。</li>
+<li><strong>第三步，获取数据（提出需要的数据）：</strong> 我需要的数据是：<ol>
+<li>北京市各类道路（主干道、次干道等）的总里程。</li>
+<li>一个抽样数据：平均每公里各类道路上，各类井盖的大致密度。</li>
+</ol>
+</li>
+<li><strong>第四步，计算：</strong> 比如，（主干道总里程 * 主干道井盖密度） + （次干道总里程 * 次干道井盖密度）+ … 这样把所有类型加起来，得到一个估算值。”</li>
+</ul>
+</li>
+</ul>
+<h2 id="并没有官方的井盖数据，你该怎么统计呢？"><a href="#并没有官方的井盖数据，你该怎么统计呢？" class="headerlink" title="并没有官方的井盖数据，你该怎么统计呢？"></a>并没有官方的井盖数据，你该怎么统计呢？</h2><ul>
+<li><strong>口语化回答思路:</strong> “如果没有官方数据，我会采用<strong>抽样统计</strong>的方法。<ol>
+<li><strong>分层抽样：</strong> 我会把北京地图网格化，并根据区域功能（比如CBD、普通住宅区、郊区、工业区）进行分层。</li>
+<li><strong>实地或地图抽样：</strong> 在每个分层里，随机选取几个样本区域（比如1平方公里）。然后，利用地图的卫星视图或者街景视图，在这些样本区域里去数井盖的数量，并测量道路长度，计算出每种区域的‘井盖密度’。</li>
+<li><strong>加权推算：</strong> 根据北京市各类功能区的总面积，用每个区域的面积乘以刚才算出的对应密度，最后把所有区域的估算值加起来，得到一个相对靠谱的总数。”</li>
+</ol>
+</li>
+<li><strong>考点:</strong> 逻辑思维、问题分解能力、估算和建模能力。</li>
+</ul>
+<hr>
+<h2 id="pod从无到有？中间过程是怎么的呢？"><a href="#pod从无到有？中间过程是怎么的呢？" class="headerlink" title="pod从无到有？中间过程是怎么的呢？"></a>pod从无到有？中间过程是怎么的呢？</h2><ul>
+<li><strong>口语化回答思路:</strong> “这个过程是K8s各个组件协同工作的结果：<ol>
+<li><strong>用户提交：</strong> 我们通过 <code>kubectl apply -f pod.yaml</code> 把一个Pod的定义文件提交给<strong>API Server</strong>。</li>
+<li><strong>存储信息：</strong> API Server会把这个Pod对象的信息存到<strong>etcd</strong>这个数据库里。</li>
+<li><strong>调度：</strong> <strong>Scheduler</strong>（调度器）会一直监控API Server，发现有一个新的Pod但是还没有被分配到任何节点上。于是它会根据一系列算法（比如节点的资源情况），选一个最合适的节点。然后，它会把选择结果（比如‘这个Pod应该跑在Node1上’）更新回API Server，存到etcd里。</li>
+<li><strong>创建：</strong> 目标节点（比如Node1）上的<strong>Kubelet</strong>会一直监控API Server，它发现有一个Pod被调度到自己头上了。于是Kubelet就会调用本机的<strong>容器运行时</strong>（比如Docker或containerd），去拉取Pod里定义的镜像，并创建和启动容器。</li>
+<li><strong>上报状态：</strong> 容器启动后，Kubelet会把Pod的最新状态（比如Running）上报给API Server，更新到etcd里。这样，我们通过kubectl就能看到Pod已经成功运行了。”</li>
+</ol>
+</li>
+<li><strong>考点:</strong> Kubernetes核心组件（API Server, etcd, Scheduler, Kubelet）的职责和协同流程。</li>
+</ul>
+<h2 id="pod重启策略？怎么控制这pod重启策略？"><a href="#pod重启策略？怎么控制这pod重启策略？" class="headerlink" title="pod重启策略？怎么控制这pod重启策略？"></a>pod重启策略？怎么控制这pod重启策略？</h2><ul>
+<li><strong>口语化回答思路:</strong> “Pod的重启策略由它spec里的 <code>restartPolicy</code> 字段控制。主要有三种策略：<ol>
+<li><strong>Always：</strong> 这是默认策略。只要容器退出了，不管是什么原因（正常结束还是异常崩溃），Kubelet都会自动重启它。</li>
+<li><strong>OnFailure：</strong> 只有当容器以非0状态码退出时（也就是异常退出），Kubelet才会重启它。</li>
+<li><strong>Never：</strong> 不管容器怎么退出，Kubelet都不会重启它。这个通常用于一次性任务。”</li>
+</ol>
+</li>
+<li><strong>考点:</strong> Pod生命周期管理。</li>
+</ul>
+<h2 id="说出你了解的排序算法时间和空间复杂度，稳定性"><a href="#说出你了解的排序算法时间和空间复杂度，稳定性" class="headerlink" title="说出你了解的排序算法时间和空间复杂度，稳定性"></a>说出你了解的排序算法时间和空间复杂度，稳定性</h2><ul>
+<li><strong>口语化回答思路:</strong> “好的，我说几个常见的：<ul>
+<li><strong>冒泡排序：</strong> 时间复杂度是O(n²)，空间复杂度是O(1)，是<strong>稳定</strong>的。</li>
+<li><strong>选择排序：</strong> 时间复杂度是O(n²)，空间复杂度是O(1)，是<strong>不稳定</strong>的。</li>
+<li><strong>快速排序：</strong> 平均时间复杂度是O(n log n)，最坏是O(n²)，空间复杂度是O(log n)（递归栈的深度），是<strong>不稳定</strong>的。</li>
+<li><strong>堆排序：</strong> 时间复杂度是O(n log n)，空间复杂度是O(1)，是<strong>不稳定</strong>的。”</li>
+</ul>
+</li>
+<li><strong>考点:</strong> 基础数据结构与算法知识。</li>
+</ul>
+<h2 id="负载均衡软件，nginx-是进程还是线程，一般nginx你怎么用的呢"><a href="#负载均衡软件，nginx-是进程还是线程，一般nginx你怎么用的呢" class="headerlink" title="负载均衡软件，nginx 是进程还是线程，一般nginx你怎么用的呢"></a>负载均衡软件，nginx 是进程还是线程，一般nginx你怎么用的呢</h2><ul>
+<li><strong>口语化回答思路:</strong> “Nginx是<strong>多进程</strong>模型。它有一个Master主进程和多个Worker工作进程。Master进程负责加载配置、管理Worker进程。真正处理网络请求的是Worker进程，每个Worker进程是单线程的，但通过<strong>异步非阻塞的事件驱动模型（比如epoll）</strong>，一个Worker进程可以高效地处理成千上万个并发连接。<br>我最常用的一个场景就是把它作为<strong>反向代理和负载均衡器</strong>。比如我有一个网站，后端跑了3个完全一样的应用服务。我会在最前面放一台Nginx，让所有用户的请求都先打到Nginx上。然后在Nginx的配置文件里，用 <code>upstream</code> 模块定义好后端那3台服务器的地址。Nginx会根据设定的负载均衡策略（比如轮询），把收到的请求分发给后端的一台服务器去处理。这样做的好处是，可以把流量均分，避免单台服务器压力过大，也方便后续水平扩展。”</li>
+<li><strong>考点:</strong> Nginx的进程模型、事件驱动原理、核心应用场景（反向代理、负载均衡）。</li>
+</ul>
+<h2 id="进程和线程区别？进程间通信方式？"><a href="#进程和线程区别？进程间通信方式？" class="headerlink" title="进程和线程区别？进程间通信方式？"></a>进程和线程区别？进程间通信方式？</h2><ul>
+<li><strong>口语化回答思路:</strong> “<strong>区别：</strong><ul>
+<li>最核心的区别是，<strong>进程是操作系统分配资源的最小单位，而线程是CPU调度的最小单位。</strong></li>
+<li>可以把进程比作一个‘工厂’，它有自己独立的厂房、设备和原材料（独立的内存空间）。而线程就是工厂里的‘工人’，工人们共享工厂里的资源，但各自干自己的活。一个工厂里可以有很多个工人。</li>
+<li>所以，进程间切换开销大，因为要切换整个‘工厂’的环境。线程间切换开销小，因为只是换个工人在同一个工厂里干活。<br><strong>进程间通信（IPC）方式：</strong></li>
+<li>主要有：<strong>管道</strong>（包括匿名管道和命名管道）、<strong>消息队列</strong>、<strong>共享内存</strong>（速度最快）、<strong>信号量</strong>（通常用来同步）、<strong>套接字（Socket）</strong>（最通用，可以跨机器通信）。”</li>
+</ul>
+</li>
+<li><strong>考点:</strong> 操作系统核心概念。</li>
+</ul>
+<h2 id="讲一下linux系统的中断，以及怎么处理中断的？"><a href="#讲一下linux系统的中断，以及怎么处理中断的？" class="headerlink" title="讲一下linux系统的中断，以及怎么处理中断的？"></a>讲一下linux系统的中断，以及怎么处理中断的？</h2><ul>
+<li><strong>口语化回答思路:</strong> “中断是CPU用来处理异步事件的一种机制。它就像一个‘打断’信号，告诉CPU‘有更紧急的事要处理，先放下手里的活儿’。<ul>
+<li><strong>处理过程是：</strong> 当硬件（比如网卡收到数据包）或软件产生一个中断信号时，CPU会立刻<strong>暂停当前正在执行的指令</strong>，并保存好当前的‘工作现场’（比如寄存器的值）。然后，CPU会根据中断信号的类型，去一个叫做‘中断向量表’的地方查找对应的<strong>中断处理程序（ISR）</strong>，并跳转去执行它。中断处理程序会快速地处理完这个紧急事件。处理完成后，CPU会<strong>恢复之前保存的‘工作现场’</strong>，继续执行刚才被打断的那个指令，就好像什么都没发生过一样。”</li>
+</ul>
+</li>
+<li><strong>考点:</strong> 操作系统底层原理。</li>
+</ul>
+<h2 id="DNS解析过程？"><a href="#DNS解析过程？" class="headerlink" title="DNS解析过程？"></a>DNS解析过程？</h2><ul>
+<li><strong>口语化回答思路:</strong> （同第一面的回答，可以更详细）“这是一个‘分层查找’的过程：<ol>
+<li><strong>浏览器缓存：</strong> 先看浏览器自己记不记得。</li>
+<li><strong>操作系统缓存：</strong> 再看操作系统的hosts文件和缓存里记不记得。</li>
+<li><strong>本地DNS服务器（LDNS）：</strong> 去问网络提供商（比如电信）的DNS服务器。</li>
+<li><strong>根域名服务器：</strong> 如果LDNS也不知道，它就会去问全球13台根服务器，根服务器会告诉它‘这事你得去问管.com的顶级域名服务器’。</li>
+<li><strong>顶级域名服务器（TLD）：</strong> LDNS就去问.com的服务器，它会说‘这事你得去问管meituan.com的权威DNS服务器’。</li>
+<li><strong>权威DNS服务器：</strong> LDNS最后去问美团自己的DNS服务器，它就会给出<a target="_blank" rel="noopener" href="http://www.meituan.com对应的ip地址./">www.meituan.com对应的IP地址。</a></li>
+<li><strong>缓存结果：</strong> LDNS拿到IP后，会自己缓存一份，并返回给我的电脑。这样下次再有人问，它就直接知道了。”</li>
+</ol>
+</li>
+<li><strong>考点:</strong> DNS的递归查询和迭代查询过程。</li>
+</ul>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E4%B9%A6%E8%AF%84/" class="print-no-link">#书评</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>百度SRE别人的面经AI回答下</div>
+      <div>http://example.com/2024/10/01/百度SRE别人的面经/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Hugger</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年10月1日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2024/10/01/%E8%80%81%E4%B9%A6%E5%B0%8F%E8%AF%84%E4%B8%80%E4%B8%8B/" title="以前看过的几本“老作者经典”漫谈 小评">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">以前看过的几本“老作者经典”漫谈 小评</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/09/05/%E9%9A%8F%E4%BE%BF%E5%86%99%E5%86%99/" title="经典漫谈">
+                        <span class="hidden-mobile">经典漫谈</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
